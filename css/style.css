@@ -559,13 +559,23 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
   color: var(--color-gold);
 }
 
-@media (max-width: 480px) {
-  .nav-logo img {
-    height: 38px;
+@media (max-width: 768px) {
+  .nav-logo-text {
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
   }
 
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
   .nav-logo-text {
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
+    display: none;
+  }
+
+  .nav-logo img {
+    height: 40px;
   }
 }

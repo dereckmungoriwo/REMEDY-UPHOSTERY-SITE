@@ -4,12 +4,11 @@
    ============================================ */
 
 /* ══════════════════════════════════════════
-   ✏️ EDIT: Your WhatsApp number here
+   ✏️ EDIT: WhatsApp number here
    Include country code, no spaces or dashes
-   Example: South Africa +27 → "27821234567"
-            USA +1         → "15551234567"
+   South Africa +27 → "27684980147"
    ══════════════════════════════════════════ */
-const WHATSAPP_NUMBER = "27821234567";
+const WHATSAPP_NUMBER = "27684980147";
 
 /* ✏️ EDIT: Pre-filled message customers will see when they open WhatsApp */
 const WHATSAPP_MESSAGE = "Hi! I found you on your website and I'd like to enquire about your upholstery services.";

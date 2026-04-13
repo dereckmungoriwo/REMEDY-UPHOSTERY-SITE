@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Remedy Upholstery</title>
-  <meta name="description" content="Get in touch with Remedy Upholstery. Request a quote, ask about services, or schedule a consultation." />
+  <title>Contact — Stitch &amp; Soul Upholstery</title>
+  <meta name="description" content="Get in touch with Stitch & Soul Upholstery. Request a quote, ask about services, or schedule a consultation." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/contact.css" />
   <script src="js/main.js" defer></script>
@@ -14,8 +14,8 @@
   <!-- ══ Navigation ══ -->
   <nav class="site-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a class="nav-logo" href="index.html" aria-label="Remedy — Home">
-        <img src="assets/logo-placeholder.png" alt="Remedy Upholstery Logo" />
+      <a class="nav-logo" href="index.html" aria-label="Stitch & Soul — Home">
+        <img src="assets/logo-placeholder.png" alt="Stitch & Soul Upholstery Logo" />
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -44,8 +44,8 @@
         <!-- Info Column -->
         <div class="contact-info">
           <h2>Visit or Call Us</h2>
-          <!-- ✏️ EDIT: business info -->
-          <p>We're a family-run shop located in Bramely Johannesburg. Walk-ins welcome during business hours, or reach out to schedule a free consultation.</p>
+          <!-- ✏️ EDIT: Replace with your business info -->
+          <p>We're a family-run shop located in [Your City]. Walk-ins welcome during business hours, or reach out to schedule a free consultation.</p>
 
           <div class="info-items">
 
@@ -53,8 +53,8 @@
               <div class="info-icon" aria-hidden="true">📍</div>
               <div class="info-text">
                 <strong>Our Shop</strong>
-                <!-- ✏️ EDIT: address -->
-                <p>123 Craftsman Lane<br />Bramely Johannesburg</p>
+                <!-- ✏️ EDIT: Your address -->
+                <p>123 Craftsman Lane<br />[Your City, State ZIP]</p>
               </div>
             </div>
 
@@ -62,8 +62,8 @@
               <div class="info-icon" aria-hidden="true">📞</div>
               <div class="info-text">
                 <strong>Phone</strong>
-                <!-- ✏️ EDIT: phone number -->
-                <span><a href="tel:+271234567860">(27) 123-4567-890</a></span>
+                <!-- ✏️ EDIT: Your phone number -->
+                <span><a href="tel:+15551234567">(555) 123-4567</a></span>
               </div>
             </div>
 
@@ -72,7 +72,7 @@
               <div class="info-text">
                 <strong>Email</strong>
                 <!-- ✏️ EDIT: Your email -->
-                <span><a href="mailto:victor@remedyupholstery.com">victor@remedyupholstery.com</a></span>
+                <span><a href="mailto:hello@stitchandsoul.com">hello@stitchandsoul.com</a></span>
               </div>
             </div>
 
@@ -80,7 +80,7 @@
               <div class="info-icon" aria-hidden="true">🕐</div>
               <div class="info-text">
                 <strong>Hours</strong>
-                <!-- ✏️ EDIT: business hours. Add class "today" to the current day row -->
+                <!-- ✏️ EDIT: Your hours. Add class "today" to the current day row -->
                 <table class="hours-table" aria-label="Business hours">
                   <tbody>
                     <tr><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
@@ -236,21 +236,70 @@
       </div><!-- /contact-inner -->
     </section>
 
-    <!-- ── Map Placeholder ── -->
-    <!-- ✏️ EDIT: real Google Maps embed:
-          src="https://www.google.com/maps?q=Remedy+Upholstery,-26.125849,28.0859287&z=16&output=embed"
+    <!-- ── Map Section ── -->
     <section class="map-section" aria-labelledby="map-heading">
       <div class="map-inner">
-        <div class="map-header">
-          <span class="section-label">Find Us</span>
-          <h3 id="map-heading">Our Location</h3>
-        </div>
-        <div class="map-placeholder" role="img" aria-label="Map placeholder — replace with real Google Maps embed">
-          <span aria-hidden="true">🗺️</span>
-          <span>Map Embed Goes Here</span>
-          <span style="font-size:0.7rem;opacity:0.6;">Replace with Google Maps iframe</span>
-        </div>
-      </div>
+
+        <div class="map-card">
+
+          <!-- Left: info strip -->
+          <div class="map-info-strip">
+            <span class="section-label">Find Us</span>
+            <h3 id="map-heading">Our Location</h3>
+
+            <div class="map-detail">
+              <span class="map-detail-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Remedy Upholstery</strong>
+                <!-- ✏️ EDIT: your street address -->
+                <p>123 Craftsman Lane<br />[Your City, State ZIP]</p>
+              </div>
+            </div>
+
+            <div class="map-detail">
+              <span class="map-detail-icon" aria-hidden="true">🚗</span>
+              <div>
+                <strong>Parking</strong>
+                <p>Free parking available on-site and along the street.</p>
+              </div>
+            </div>
+
+            <div class="map-detail">
+              <span class="map-detail-icon" aria-hidden="true">🕐</span>
+              <div>
+                <strong>Walk-ins Welcome</strong>
+                <p>Mon – Fri &nbsp;9am – 5pm<br />Sat &nbsp;10am – 2pm</p>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.google.com/?q=Remedy+Upholstery,-26.125849,28.0859287"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn map-directions-btn"
+              aria-label="Open directions in Google Maps"
+            >
+              Get Directions ↗
+            </a>
+          </div>
+
+          <!-- Right: map embed -->
+          <div class="map-embed-wrap">
+            <iframe
+              id="shop-map"
+              title="Remedy Upholstery location on Google Maps"
+              src="https://www.google.com/maps?q=Remedy+Upholstery,-26.125849,28.0859287&z=16&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+        </div><!-- /map-card -->
+      </div><!-- /map-inner -->
     </section>
 
   </main>
@@ -260,7 +309,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="assets/logo-placeholder.png" alt="Stitch & Soul Upholstery" />
-        <p>Premium custom upholstery crafted with care in Bramely johannesburg. Transforming furniture since 2025.</p>
+        <p>Premium custom upholstery crafted with care in [Your City]. Transforming furniture since 2005.</p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -272,14 +321,14 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>📍 123 Corlette Drive<br />Bramely Johannesburg</p>
-        <p>📞 (27) 123-4567-890</p>
-        <p>✉️ Victor@remedyupholstery.com</p>
+        <p>📍 123 Craftsman Lane<br />[Your City, State ZIP]</p>
+        <p>📞 (555) 123-4567</p>
+        <p>✉️ hello@stitchandsoul.com</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 remedy Upholstery. All rights reserved.</p>
-      <p>Handcrafted with love♥ in Bramely johannesburg</p>
+      <p>&copy; 2025 Stitch &amp; Soul Upholstery. All rights reserved.</p>
+      <p>Handcrafted with ♥ in [Your City]</p>
     </div>
   </footer>
 

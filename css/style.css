@@ -1,6 +1,6 @@
 /* ============================================
    style.css — Shared base styles & variables
-   Stitch & Soul Upholstery
+   Remedy Upholstery
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap');
@@ -20,11 +20,11 @@
   --color-white:     #faf6ef;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-ui:      'Josefin Sans', sans-serif;
+  --font-ui: 'Josefin Sans', sans-serif;
 
-  --radius-sm:  4px;
-  --radius-md:  8px;
-  --radius-lg:  16px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
 
   --shadow-card: 0 4px 24px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
   --shadow-glow: 0 0 30px rgba(180,140,80,0.12);
@@ -33,7 +33,9 @@
 }
 
 /* ── Reset & Base ── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -52,20 +54,54 @@ body {
   line-height: 1.7;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-gold);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-gold-lt);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
 }
 
 /* ── Scrollbar ── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--color-bg); }
-::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-gold); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
 
 /* ── Typography ── */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 300;
   color: var(--color-cream);
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 0.02em;
 }
 
@@ -73,26 +109,35 @@ h1 { font-size: clamp(2.4rem, 6vw, 5rem); }
 h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
 h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
 
-p { margin-bottom: 1rem; color: var(--color-text); }
-
-a {
-  color: var(--color-gold);
-  text-decoration: none;
-  transition: color var(--transition);
+/* ── Utility ── */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
-a:hover { color: var(--color-gold-lt); }
-
-img { display: block; max-width: 100%; height: auto; }
 
 /* ── Navigation ── */
 .site-nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background: rgba(15,13,10,0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--transition), background var(--transition);
+}
+
+.site-nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 
 .nav-inner {
@@ -123,16 +168,18 @@ img { display: block; max-width: 100%; height: auto; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-text-dim);
-  transition: color var(--transition);
   position: relative;
   padding-bottom: 2px;
+  transition: color var(--transition);
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -2px; left: 0;
-  width: 0; height: 1px;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
   background: var(--color-gold);
   transition: width var(--transition);
 }
@@ -155,16 +202,19 @@ img { display: block; max-width: 100%; height: auto; }
   margin: 1.5rem auto;
   max-width: 200px;
 }
+
 .gold-rule::before,
 .gold-rule::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
   background: var(--color-gold);
   opacity: 0.5;
 }
+
 .gold-rule-diamond {
-  width: 6px; height: 6px;
+  width: 6px;
+  height: 6px;
   background: var(--color-gold);
   transform: rotate(45deg);
   flex-shrink: 0;
@@ -188,7 +238,7 @@ img { display: block; max-width: 100%; height: auto; }
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 0.9rem 2.2rem;
+  padding: 0.95rem 2.2rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-gold);
   color: var(--color-gold);
@@ -200,7 +250,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--color-gold);
@@ -233,7 +283,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ── Page Wrapper ── */
 .page-main {
-  padding-top: 70px; /* nav height */
+  padding-top: 70px;
   min-height: 100vh;
 }
 
@@ -249,7 +299,7 @@ img { display: block; max-width: 100%; height: auto; }
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr 1fr;
   gap: 2.5rem;
 }
 
@@ -259,9 +309,10 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .footer-brand p {
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   color: var(--color-text-dim);
-  max-width: 260px;
+  max-width: 280px;
+  line-height: 1.8;
 }
 
 .footer-col h4 {
@@ -278,7 +329,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .footer-col ul li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.65rem;
 }
 
 .footer-col ul li a {
@@ -294,7 +345,8 @@ img { display: block; max-width: 100%; height: auto; }
 .footer-col p {
   font-size: 0.88rem;
   color: var(--color-text-dim);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
+  line-height: 1.7;
 }
 
 .footer-bottom {
@@ -315,15 +367,33 @@ img { display: block; max-width: 100%; height: auto; }
   margin: 0;
 }
 
-/* ── Fade-in Animation ── */
+/* ── Fade-up Animation ── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-up {
   opacity: 0;
   animation: fadeUp 0.8s ease forwards;
+}
+
+/* ── Scroll Reveal ── */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.scroll-hidden.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ── WhatsApp Floating Button ── */
@@ -348,7 +418,6 @@ img { display: block; max-width: 100%; height: auto; }
   pointer-events: auto;
 }
 
-/* Bubble */
 .wa-bubble {
   position: relative;
   width: 58px;
@@ -368,14 +437,12 @@ img { display: block; max-width: 100%; height: auto; }
   box-shadow: 0 6px 28px rgba(37,211,102,0.55), 0 3px 12px rgba(0,0,0,0.3);
 }
 
-/* WhatsApp SVG icon */
 .wa-icon {
   width: 30px;
   height: 30px;
   fill: #ffffff;
 }
 
-/* Pulse ring animation */
 .wa-pulse {
   position: absolute;
   inset: -4px;
@@ -385,12 +452,11 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 @keyframes waPulse {
-  0%   { transform: scale(1);   opacity: 0.8; }
-  70%  { transform: scale(1.35); opacity: 0;   }
-  100% { transform: scale(1.35); opacity: 0;   }
+  0%   { transform: scale(1); opacity: 0.8; }
+  70%  { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
 }
 
-/* Tooltip label */
 .wa-tooltip {
   background: var(--color-surface);
   color: var(--color-cream);
@@ -412,27 +478,16 @@ img { display: block; max-width: 100%; height: auto; }
   pointer-events: none;
 }
 
-/* ── Scroll Reveal ── */
-.scroll-hidden {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
-}
-
-.scroll-hidden.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Nav scrolled shadow */
-.site-nav.scrolled {
-  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
-}
-
-/* ── Responsive Nav ── */
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .nav-links { gap: 1.4rem; }
-  .nav-links a { font-size: 0.65rem; }
+  .nav-links {
+    gap: 1.4rem;
+  }
+
+  .nav-links a {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+  }
 
   .footer-inner {
     grid-template-columns: 1fr;
@@ -446,6 +501,39 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 @media (max-width: 480px) {
-  .nav-links { gap: 1rem; }
-  .nav-inner { padding: 0 1rem; }
+  .nav-inner {
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    gap: 0.85rem;
+  }
+
+  .nav-links a {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+  }
+
+  .btn {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .wa-float {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .wa-bubble {
+    width: 54px;
+    height: 54px;
+  }
+
+  .wa-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .wa-tooltip {
+    display: none;
+  }
 }

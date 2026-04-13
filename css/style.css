@@ -326,6 +326,109 @@ img { display: block; max-width: 100%; height: auto; }
   animation: fadeUp 0.8s ease forwards;
 }
 
+/* ── WhatsApp Floating Button ── */
+.wa-float {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.wa-float.wa-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Bubble */
+.wa-bubble {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4), 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.wa-float:hover .wa-bubble {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.55), 0 3px 12px rgba(0,0,0,0.3);
+}
+
+/* WhatsApp SVG icon */
+.wa-icon {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+}
+
+/* Pulse ring animation */
+.wa-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,0.5);
+  animation: waPulse 2.2s ease-out infinite;
+}
+
+@keyframes waPulse {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  70%  { transform: scale(1.35); opacity: 0;   }
+  100% { transform: scale(1.35); opacity: 0;   }
+}
+
+/* Tooltip label */
+.wa-tooltip {
+  background: var(--color-surface);
+  color: var(--color-cream);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateX(0);
+}
+
+.wa-float.wa-tooltip-hidden .wa-tooltip {
+  opacity: 0;
+  transform: translateX(6px);
+  pointer-events: none;
+}
+
+/* ── Scroll Reveal ── */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.scroll-hidden.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nav scrolled shadow */
+.site-nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
 /* ── Responsive Nav ── */
 @media (max-width: 768px) {
   .nav-links { gap: 1.4rem; }

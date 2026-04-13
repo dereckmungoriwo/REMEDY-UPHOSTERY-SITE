@@ -1,0 +1,305 @@
+/* ============================================
+   products.css — Products page styles
+   Stitch & Soul Upholstery
+   ============================================ */
+
+/* ── Page Header ── */
+.products-hero {
+  padding: 5rem 2rem 3.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 0%, rgba(180,140,80,0.06) 0%, transparent 70%),
+    var(--color-bg);
+}
+
+.products-hero h1 {
+  margin-bottom: 0.75rem;
+  animation: fadeUp 0.6s ease 0.1s both;
+}
+
+.products-hero p {
+  color: var(--color-text-dim);
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeUp 0.6s ease 0.25s both;
+}
+
+/* ── Filter Bar ── */
+.filter-bar {
+  max-width: 1200px;
+  margin: 2.5rem auto 0;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  margin-right: 0.5rem;
+}
+
+.filter-btn {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-dim);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(180,140,80,0.06);
+}
+
+/* ── Products Section ── */
+.products-section {
+  padding: 3.5rem 2rem 6rem;
+}
+
+.products-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── 3×5 Product Grid (15 items) ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+/* ── Product Card ── */
+.product-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition);
+  position: relative;
+  cursor: pointer;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* Stagger card animations */
+.product-card:nth-child(1)  { animation-delay: 0.05s; }
+.product-card:nth-child(2)  { animation-delay: 0.10s; }
+.product-card:nth-child(3)  { animation-delay: 0.15s; }
+.product-card:nth-child(4)  { animation-delay: 0.20s; }
+.product-card:nth-child(5)  { animation-delay: 0.25s; }
+.product-card:nth-child(6)  { animation-delay: 0.30s; }
+.product-card:nth-child(7)  { animation-delay: 0.35s; }
+.product-card:nth-child(8)  { animation-delay: 0.40s; }
+.product-card:nth-child(9)  { animation-delay: 0.45s; }
+.product-card:nth-child(10) { animation-delay: 0.50s; }
+.product-card:nth-child(11) { animation-delay: 0.55s; }
+.product-card:nth-child(12) { animation-delay: 0.60s; }
+.product-card:nth-child(13) { animation-delay: 0.65s; }
+.product-card:nth-child(14) { animation-delay: 0.70s; }
+.product-card:nth-child(15) { animation-delay: 0.75s; }
+
+.product-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+/* ── Product Image ── */
+.product-img-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-surface2);
+}
+
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Quick View Overlay */
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,13,10,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.overlay-label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-pale);
+  border: 1px solid var(--color-gold-pale);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-sm);
+  background: rgba(15,13,10,0.4);
+}
+
+/* Product Badge */
+.product-badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.badge-new {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+.badge-sale {
+  background: #8b3a3a;
+  color: #fad4d4;
+}
+
+/* ── Product Info ── */
+.product-info {
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.product-category {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.product-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-cream);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.product-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+}
+
+.product-price {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-gold-lt);
+}
+
+.product-price-original {
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+  text-decoration: line-through;
+}
+
+.product-cta {
+  margin-top: 1.1rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-dim);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.product-cta:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(180,140,80,0.05);
+}
+
+/* ── Custom Order Banner ── */
+.custom-banner {
+  margin-top: 4rem;
+  padding: 3rem 2.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.custom-banner-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.custom-banner-text p {
+  color: var(--color-text-dim);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .custom-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Stitch &amp; Soul Upholstery</title>
+  <meta name="description" content="Browse our collection of custom upholstered pieces — chairs, sofas, ottomans, and more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/products.css" />
+</head>
+<body>
+
+  <!-- ══ Navigation ══ -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html" aria-label="Stitch & Soul — Home">
+        <img src="assets/logo-placeholder.png" alt="Stitch & Soul Upholstery Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active" aria-current="page">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══ Main Content ══ -->
+  <main class="page-main">
+
+    <!-- ── Page Header ── -->
+    <header class="products-hero">
+      <span class="section-label">Our Collection</span>
+      <h1>Handcrafted Pieces</h1>
+      <p>Each item is upholstered to order. Replace any image and price with your own work.</p>
+
+      <!-- Filter Bar (decorative — hook up JS as needed) -->
+      <div class="filter-bar" role="group" aria-label="Product filters">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" type="button">All</button>
+        <button class="filter-btn" type="button">Chairs</button>
+        <button class="filter-btn" type="button">Sofas</button>
+        <button class="filter-btn" type="button">Ottomans</button>
+        <button class="filter-btn" type="button">Custom</button>
+      </div>
+    </header>
+
+    <!-- ── Product Grid (3 × 5 = 15 items) ── -->
+    <section class="products-section" aria-labelledby="products-heading">
+      <h2 id="products-heading" class="visually-hidden">Product Listing</h2>
+
+      <div class="products-inner">
+        <div class="products-grid">
+
+          <!-- ✏️ PRODUCT 01 ── Replace image src, name, and price -->
+          <article class="product-card" aria-label="Accent Chair">
+            <div class="product-img-wrap">
+              <img src="assets/product-01.png" alt="Accent Chair in warm tobacco fabric" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+              <span class="product-badge badge-new">New</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Seating</span>
+              <h3 class="product-name">Accent Chair</h3>
+              <div class="product-price-row">
+                <span class="product-price">$650</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 02 -->
+          <article class="product-card" aria-label="Loveseat">
+            <div class="product-img-wrap">
+              <img src="assets/product-02.png" alt="Two-seat loveseat" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Sofas</span>
+              <h3 class="product-name">Loveseat</h3>
+              <div class="product-price-row">
+                <span class="product-price">$1,200</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 03 -->
+          <article class="product-card" aria-label="Ottoman">
+            <div class="product-img-wrap">
+              <img src="assets/product-03.png" alt="Upholstered ottoman" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+              <span class="product-badge badge-sale">Sale</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Ottomans</span>
+              <h3 class="product-name">Ottoman</h3>
+              <div class="product-price-row">
+                <span class="product-price">$380</span>
+                <span class="product-price-original">$450</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 04 -->
+          <article class="product-card" aria-label="Dining Chair">
+            <div class="product-img-wrap">
+              <img src="assets/product-04.png" alt="Upholstered dining chair" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Seating</span>
+              <h3 class="product-name">Dining Chair</h3>
+              <div class="product-price-row">
+                <span class="product-price">$420</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 05 -->
+          <article class="product-card" aria-label="Sofa">
+            <div class="product-img-wrap">
+              <img src="assets/product-05.png" alt="Full upholstered sofa" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+              <span class="product-badge badge-new">New</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Sofas</span>
+              <h3 class="product-name">Sofa</h3>
+              <div class="product-price-row">
+                <span class="product-price">$2,100</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 06 -->
+          <article class="product-card" aria-label="Armchair">
+            <div class="product-img-wrap">
+              <img src="assets/product-06.png" alt="Classic armchair" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Seating</span>
+              <h3 class="product-name">Armchair</h3>
+              <div class="product-price-row">
+                <span class="product-price">$780</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 07 -->
+          <article class="product-card" aria-label="Bench">
+            <div class="product-img-wrap">
+              <img src="assets/product-07.png" alt="Upholstered bench" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Benches</span>
+              <h3 class="product-name">Bench</h3>
+              <div class="product-price-row">
+                <span class="product-price">$560</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 08 -->
+          <article class="product-card" aria-label="Chaise Lounge">
+            <div class="product-img-wrap">
+              <img src="assets/product-08.png" alt="Chaise lounge in caramel fabric" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Sofas</span>
+              <h3 class="product-name">Chaise Lounge</h3>
+              <div class="product-price-row">
+                <span class="product-price">$1,650</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 09 -->
+          <article class="product-card" aria-label="Club Chair">
+            <div class="product-img-wrap">
+              <img src="assets/product-09.png" alt="Club chair" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+              <span class="product-badge badge-sale">Sale</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Seating</span>
+              <h3 class="product-name">Club Chair</h3>
+              <div class="product-price-row">
+                <span class="product-price">$890</span>
+                <span class="product-price-original">$1,050</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 10 -->
+          <article class="product-card" aria-label="Wingback Chair">
+            <div class="product-img-wrap">
+              <img src="assets/product-10.png" alt="Wingback chair" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Seating</span>
+              <h3 class="product-name">Wingback Chair</h3>
+              <div class="product-price-row">
+                <span class="product-price">$940</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 11 -->
+          <article class="product-card" aria-label="Settee">
+            <div class="product-img-wrap">
+              <img src="assets/product-11.png" alt="Settee loveseat" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Sofas</span>
+              <h3 class="product-name">Settee</h3>
+              <div class="product-price-row">
+                <span class="product-price">$1,100</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 12 -->
+          <article class="product-card" aria-label="Sectional">
+            <div class="product-img-wrap">
+              <img src="assets/product-12.png" alt="Sectional sofa" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+              <span class="product-badge badge-new">New</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Sofas</span>
+              <h3 class="product-name">Sectional</h3>
+              <div class="product-price-row">
+                <span class="product-price">$3,400</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 13 -->
+          <article class="product-card" aria-label="Rocking Chair">
+            <div class="product-img-wrap">
+              <img src="assets/product-13.png" alt="Upholstered rocking chair" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Seating</span>
+              <h3 class="product-name">Rocking Chair</h3>
+              <div class="product-price-row">
+                <span class="product-price">$720</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 14 -->
+          <article class="product-card" aria-label="Bar Stool">
+            <div class="product-img-wrap">
+              <img src="assets/product-14.png" alt="Upholstered bar stool" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Seating</span>
+              <h3 class="product-name">Bar Stool</h3>
+              <div class="product-price-row">
+                <span class="product-price">$310</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+          <!-- ✏️ PRODUCT 15 -->
+          <article class="product-card" aria-label="Headboard">
+            <div class="product-img-wrap">
+              <img src="assets/product-15.png" alt="Upholstered headboard" loading="lazy" width="400" height="300" />
+              <div class="product-overlay" aria-hidden="true">
+                <span class="overlay-label">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Bedroom</span>
+              <h3 class="product-name">Headboard</h3>
+              <div class="product-price-row">
+                <span class="product-price">$850</span>
+              </div>
+              <a href="contact.html" class="product-cta">Inquire to Order</a>
+            </div>
+          </article>
+
+        </div><!-- /products-grid -->
+
+        <!-- Custom Order CTA -->
+        <div class="custom-banner">
+          <div class="custom-banner-text">
+            <h3>Don't See What You Need?</h3>
+            <p>We do fully custom work. Bring us your vision, your fabric, or just an idea.</p>
+          </div>
+          <a href="contact.html" class="btn btn-filled">Request Custom Order</a>
+        </div>
+
+      </div><!-- /products-inner -->
+    </section>
+
+  </main>
+
+  <!-- ══ Footer ══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-placeholder.png" alt="Stitch & Soul Upholstery" />
+        <p>Premium custom upholstery crafted with care in [Your City]. Transforming furniture since 2005.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 123 Craftsman Lane<br />[Your City, State ZIP]</p>
+        <p>📞 (555) 123-4567</p>
+        <p>✉️ hello@stitchandsoul.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stitch &amp; Soul Upholstery. All rights reserved.</p>
+      <p>Handcrafted with ♥ in [Your City]</p>
+    </div>
+  </footer>
+
+  <!-- Filter Button Interaction -->
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
+  </style>
+
+</body>
+</html>

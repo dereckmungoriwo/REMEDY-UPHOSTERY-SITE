@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Stitch &amp; Soul Upholstery</title>
+  <meta name="description" content="Get in touch with Stitch & Soul Upholstery. Request a quote, ask about services, or schedule a consultation." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- ══ Navigation ══ -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html" aria-label="Stitch & Soul — Home">
+        <img src="assets/logo-placeholder.png" alt="Stitch & Soul Upholstery Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══ Main Content ══ -->
+  <main class="page-main">
+
+    <!-- ── Page Header ── -->
+    <header class="contact-hero">
+      <span class="section-label">Get in Touch</span>
+      <h1>Let's Talk Upholstery</h1>
+      <p>Ready to transform a piece? Have questions? We'd love to hear from you.</p>
+    </header>
+
+    <!-- ── Contact Section ── -->
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Contact Information and Form</h2>
+
+      <div class="contact-inner">
+
+        <!-- Info Column -->
+        <div class="contact-info">
+          <h2>Visit or Call Us</h2>
+          <!-- ✏️ EDIT: Replace with your business info -->
+          <p>We're a family-run shop located in [Your City]. Walk-ins welcome during business hours, or reach out to schedule a free consultation.</p>
+
+          <div class="info-items">
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">📍</div>
+              <div class="info-text">
+                <strong>Our Shop</strong>
+                <!-- ✏️ EDIT: Your address -->
+                <p>123 Craftsman Lane<br />[Your City, State ZIP]</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">📞</div>
+              <div class="info-text">
+                <strong>Phone</strong>
+                <!-- ✏️ EDIT: Your phone number -->
+                <span><a href="tel:+15551234567">(555) 123-4567</a></span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">✉️</div>
+              <div class="info-text">
+                <strong>Email</strong>
+                <!-- ✏️ EDIT: Your email -->
+                <span><a href="mailto:hello@stitchandsoul.com">hello@stitchandsoul.com</a></span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">🕐</div>
+              <div class="info-text">
+                <strong>Hours</strong>
+                <!-- ✏️ EDIT: Your hours. Add class "today" to the current day row -->
+                <table class="hours-table" aria-label="Business hours">
+                  <tbody>
+                    <tr><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
+                    <tr><td>Tuesday</td><td>9:00 AM – 5:00 PM</td></tr>
+                    <tr><td>Wednesday</td><td>9:00 AM – 5:00 PM</td></tr>
+                    <tr><td>Thursday</td><td>9:00 AM – 5:00 PM</td></tr>
+                    <tr><td>Friday</td><td>9:00 AM – 4:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>10:00 AM – 2:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div><!-- /info-items -->
+
+          <!-- Social Links -->
+          <!-- ✏️ EDIT: Replace # with your social media URLs -->
+          <div class="contact-social" aria-label="Social media links">
+            <a href="#" class="social-link" aria-label="Facebook" title="Facebook">
+              <span aria-hidden="true">📘</span>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+              <span aria-hidden="true">📸</span>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest" title="Pinterest">
+              <span aria-hidden="true">📌</span>
+            </a>
+            <a href="#" class="social-link" aria-label="Houzz" title="Houzz">
+              <span aria-hidden="true">🏠</span>
+            </a>
+          </div>
+
+        </div><!-- /contact-info -->
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <h3 class="form-title">Send a Message</h3>
+          <p class="form-subtitle">We typically respond within 1 business day.</p>
+
+          <!-- ✏️ NOTE: To make this form functional, connect it to
+               Formspree (formspree.io), Netlify Forms, or your own backend.
+               Example Formspree: <form action="https://formspree.io/f/YOURCODE" method="POST"> -->
+
+          <div id="contact-form" role="form" aria-label="Contact form">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first-name">First Name <span aria-hidden="true">*</span></label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  placeholder="Jane"
+                  required
+                  autocomplete="given-name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last Name <span aria-hidden="true">*</span></label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  placeholder="Smith"
+                  required
+                  autocomplete="family-name"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span aria-hidden="true">*</span></label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jane@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone</label>
+                <input
+                  class="form-input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(555) 000-0000"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="service">Service Interested In</label>
+              <select class="form-select" id="service" name="service">
+                <option value="" disabled selected>Select a service…</option>
+                <option value="restoration">Furniture Restoration</option>
+                <option value="custom">Custom Upholstery</option>
+                <option value="consultation">Fabric Consultation</option>
+                <option value="auto">Auto / Marine</option>
+                <option value="commercial">Commercial Project</option>
+                <option value="repair">Repairs &amp; Touch-Ups</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea
+                class="form-textarea"
+                id="message"
+                name="message"
+                placeholder="Tell us about your piece — what it is, the fabric you have in mind, your timeline, or any questions you have…"
+                required
+                rows="5"
+              ></textarea>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="consent" name="consent" required />
+              <label for="consent">
+                I agree to be contacted by Stitch &amp; Soul Upholstery regarding my inquiry.
+                View our <a href="#">Privacy Policy</a>.
+              </label>
+            </div>
+
+            <button
+              class="btn btn-filled form-submit"
+              type="button"
+              id="submit-btn"
+              onclick="handleSubmit()"
+            >
+              Send Message
+            </button>
+
+          </div><!-- /contact-form -->
+
+          <!-- Success State -->
+          <div class="form-success" id="form-success" aria-live="polite">
+            <span class="success-icon" aria-hidden="true">✉️</span>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll be in touch within 1 business day.</p>
+          </div>
+
+        </div><!-- /contact-form-wrap -->
+
+      </div><!-- /contact-inner -->
+    </section>
+
+    <!-- ── Map Placeholder ── -->
+    <!-- ✏️ EDIT: Replace this section with a real Google Maps embed:
+         https://developers.google.com/maps/documentation/embed/get-started -->
+    <section class="map-section" aria-labelledby="map-heading">
+      <div class="map-inner">
+        <div class="map-header">
+          <span class="section-label">Find Us</span>
+          <h3 id="map-heading">Our Location</h3>
+        </div>
+        <div class="map-placeholder" role="img" aria-label="Map placeholder — replace with real Google Maps embed">
+          <span aria-hidden="true">🗺️</span>
+          <span>Map Embed Goes Here</span>
+          <span style="font-size:0.7rem;opacity:0.6;">Replace with Google Maps iframe</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ Footer ══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-placeholder.png" alt="Stitch & Soul Upholstery" />
+        <p>Premium custom upholstery crafted with care in [Your City]. Transforming furniture since 2005.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 123 Craftsman Lane<br />[Your City, State ZIP]</p>
+        <p>📞 (555) 123-4567</p>
+        <p>✉️ hello@stitchandsoul.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stitch &amp; Soul Upholstery. All rights reserved.</p>
+      <p>Handcrafted with ♥ in [Your City]</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple demo submit handler
+    // ✏️ Replace with real form submission (Formspree, Netlify Forms, etc.)
+    function handleSubmit() {
+      const firstName = document.getElementById('first-name').value.trim();
+      const email     = document.getElementById('email').value.trim();
+      const message   = document.getElementById('message').value.trim();
+      const consent   = document.getElementById('consent').checked;
+
+      if (!firstName || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      if (!consent) {
+        alert('Please agree to be contacted before submitting.');
+        return;
+      }
+
+      // Show success state
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').classList.add('visible');
+    }
+
+    // Highlight today in hours table
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const today = days[new Date().getDay()];
+    document.querySelectorAll('.hours-table tr').forEach(row => {
+      if (row.cells[0] && row.cells[0].textContent.trim() === today) {
+        row.classList.add('today');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -4,11 +4,12 @@
    ============================================ */
 
 /* ══════════════════════════════════════════
-   ✏️ EDIT: WhatsApp number
+   ✏️ EDIT: Your WhatsApp number here
    Include country code, no spaces or dashes
-   South Africa +27 → "271234578890"
+   Example: South Africa +27 → "27821234567"
+            USA +1         → "15551234567"
    ══════════════════════════════════════════ */
-const WHATSAPP_NUMBER = "271234578890";
+const WHATSAPP_NUMBER = "27821234567";
 
 /* ✏️ EDIT: Pre-filled message customers will see when they open WhatsApp */
 const WHATSAPP_MESSAGE = "Hi! I found you on your website and I'd like to enquire about your upholstery services.";
@@ -103,18 +104,113 @@ function initScrollReveal() {
    Products page — filter buttons
    ───────────────────────────────────────── */
 function initFilterButtons() {
-  const btns = document.querySelectorAll(".filter-btn");
+  const btns  = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".product-card");
+  const noResults = document.getElementById("no-results");
   if (!btns.length) return;
 
   btns.forEach(btn => {
     btn.addEventListener("click", () => {
+      // Update active button
       btns.forEach(b => {
         b.classList.remove("active");
         b.removeAttribute("aria-pressed");
       });
       btn.classList.add("active");
       btn.setAttribute("aria-pressed", "true");
+
+      const filter = btn.getAttribute("data-filter");
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const category = card.getAttribute("data-category");
+        const show = filter === "all" || category === filter;
+        card.classList.toggle("card-hidden", !show);
+        if (show) visibleCount++;
+      });
+
+      // Show "no results" if nothing matches
+      if (noResults) {
+        noResults.classList.toggle("visible", visibleCount === 0);
+      }
     });
+  });
+}
+
+
+/* ─────────────────────────────────────────
+   Products page — detail modal / lightbox
+   ───────────────────────────────────────── */
+function initProductModal() {
+  const modal     = document.getElementById("product-modal");
+  const closeBtn  = document.getElementById("modal-close");
+  if (!modal) return;
+
+  // Open modal when clicking the overlay OR the card image area
+  document.querySelectorAll(".product-card").forEach(card => {
+    const trigger = card.querySelector(".product-img-wrap");
+    if (!trigger) return;
+
+    trigger.style.cursor = "pointer";
+
+    trigger.addEventListener("click", () => {
+      // Pull data from this card
+      const img      = card.querySelector(".product-img-wrap img");
+      const badge    = card.querySelector(".product-badge");
+      const category = card.querySelector(".product-category")?.textContent || "";
+      const name     = card.querySelector(".product-name")?.textContent || "";
+      const price    = card.querySelector(".product-price")?.textContent || "";
+      const origPrice= card.querySelector(".product-price-original")?.textContent || "";
+
+      // Populate modal fields
+      document.getElementById("modal-img").src = img?.src || "";
+      document.getElementById("modal-img").alt = img?.alt || name;
+      document.getElementById("modal-category").textContent = category;
+      document.getElementById("modal-name").textContent = name;
+      document.getElementById("modal-price").textContent = price;
+
+      const origEl = document.getElementById("modal-price-original");
+      if (origPrice) {
+        origEl.textContent = origPrice;
+        origEl.style.display = "inline";
+      } else {
+        origEl.style.display = "none";
+      }
+
+      const badgeEl = document.getElementById("modal-badge");
+      if (badge) {
+        badgeEl.textContent = badge.textContent;
+        badgeEl.className   = "product-badge " + (badge.classList.contains("badge-sale") ? "badge-sale" : "badge-new");
+        badgeEl.style.display = "inline";
+      } else {
+        badgeEl.style.display = "none";
+      }
+
+      // Open
+      modal.removeAttribute("hidden");
+      modal.classList.add("modal-open");
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    });
+  });
+
+  // Close handlers
+  function closeModal() {
+    modal.classList.remove("modal-open");
+    document.body.style.overflow = "";
+    setTimeout(() => modal.setAttribute("hidden", ""), 300);
+  }
+
+  closeBtn?.addEventListener("click", closeModal);
+
+  // Click outside the box
+  modal.addEventListener("click", e => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Escape key
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && !modal.hasAttribute("hidden")) closeModal();
   });
 }
 
@@ -177,5 +273,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initNav();
   initScrollReveal();
   initFilterButtons();
+  initProductModal();
   initContactPage();
 });

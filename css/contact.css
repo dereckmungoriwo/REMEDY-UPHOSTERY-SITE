@@ -325,11 +325,11 @@
   font-size: 0.9rem;
 }
 
-/* ── Map Placeholder ── */
+/* ── Map Section ── */
 .map-section {
-  background: var(--color-surface);
+  background: var(--color-bg);
   border-top: 1px solid var(--color-border);
-  padding: 3rem 2rem;
+  padding: 4rem 2rem 5rem;
 }
 
 .map-inner {
@@ -337,34 +337,119 @@
   margin: 0 auto;
 }
 
-.map-header {
-  margin-bottom: 1.5rem;
-}
-
-.map-header h3 {
-  font-size: 1.3rem;
-}
-
-.map-placeholder {
-  width: 100%;
-  height: 280px;
-  background: var(--color-surface2);
+/* Card wrapper — side by side */
+.map-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.75rem;
-  color: var(--color-text-dim);
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-family: var(--font-ui);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  min-height: 380px;
 }
 
-.map-placeholder span:first-child {
-  font-size: 2rem;
+/* Left info strip */
+.map-info-strip {
+  background: var(--color-surface);
+  padding: 2.2rem 1.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-right: 1px solid var(--color-border);
+}
+
+.map-info-strip .section-label {
+  margin-bottom: 0.3rem;
+}
+
+.map-info-strip h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.8rem;
+  color: var(--color-cream);
+}
+
+/* Detail rows */
+.map-detail {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin-bottom: 1.4rem;
+}
+
+.map-detail-icon {
+  font-size: 1rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+}
+
+.map-detail strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.25rem;
+}
+
+.map-detail p {
+  font-size: 0.84rem;
+  color: var(--color-text-dim);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Directions button */
+.map-directions-btn {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.68rem;
+  padding: 0.75rem 1.2rem;
+}
+
+/* Right: iframe wrapper */
+.map-embed-wrap {
+  position: relative;
+  min-height: 380px;
+  background: var(--color-surface2);
+}
+
+.map-embed-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter var(--transition);
+}
+
+.map-embed-wrap:hover iframe {
+  filter: grayscale(0%) contrast(1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 800px) {
+  .map-card {
+    grid-template-columns: 1fr;
+  }
+
+  .map-embed-wrap {
+    min-height: 280px;
+  }
+
+  .map-info-strip {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 480px) {
+  .map-embed-wrap {
+    min-height: 220px;
+  }
 }
 
 /* ── Responsive ── */

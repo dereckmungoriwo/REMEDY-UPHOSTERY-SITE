@@ -11,7 +11,6 @@
 </head>
 <body>
 
-  <!-- ══ Navigation ══ -->
   <nav class="site-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a class="nav-logo" href="index.html" aria-label="Remedy Upholstery — Home">
@@ -25,35 +24,30 @@
     </div>
   </nav>
 
-  <!-- ══ Main Content ══ -->
   <main class="page-main">
-
-    <!-- ── Page Header ── -->
     <header class="products-hero">
       <span class="section-label">Our Collection</span>
       <h1>Handcrafted Pieces</h1>
       <p>Each item is upholstered to order.</p>
 
-      <!-- Filter Bar (decorative — hook up JS as needed) -->
       <div class="filter-bar" role="group" aria-label="Product filters">
         <span class="filter-label">Filter:</span>
-        <button class="filter-btn active" type="button">All</button>
-        <button class="filter-btn" type="button">Chairs</button>
-        <button class="filter-btn" type="button">Sofas</button>
-        <button class="filter-btn" type="button">Couches</button>
-        <button class="filter-btn" type="button">Bed & Headboards</button>
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="chair">Chairs</button>
+        <button class="filter-btn" type="button" data-filter="sofa">Sofas</button>
+        <button class="filter-btn" type="button" data-filter="couches">Couches</button>
+        <button class="filter-btn" type="button" data-filter="bed-headboards">Bed & Headboards</button>
+        <button class="filter-btn" type="button" data-filter="recliners">Recliners</button>
       </div>
     </header>
 
-    <!-- ── Product Grid (3 × 5 = 15 items) ── -->
     <section class="products-section" aria-labelledby="products-heading">
       <h2 id="products-heading" class="visually-hidden">Product Listing</h2>
 
       <div class="products-inner">
         <div class="products-grid">
 
-          <!-- ✏️ PRODUCT 01 ── image src, name, and price -->
-          <article class="product-card" aria-label="L Shape Upholstery">
+          <article class="product-card" data-category="sofa" aria-label="L Shape Upholstery">
             <div class="product-img-wrap">
               <img src="assets/product-01.png" alt="L Shape Upholstery" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -70,8 +64,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 02 -->
-          <article class="product-card" aria-label="Recliner reupholstery">
+          <article class="product-card" data-category="sofa" aria-label="Recliner reupholstery">
             <div class="product-img-wrap">
               <img src="assets/product-02.png" alt="Recliner reupholstery" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -88,17 +81,16 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 03 -->
-          <article class="product-card" aria-label="Couch & Ocassional Chairs">
+          <article class="product-card" data-category="sofa" aria-label="Couch & Occasional Chairs">
             <div class="product-img-wrap">
-              <img src="assets/product-03.png" alt="Upholstered Couch & Ocassional Chairs" loading="lazy" width="400" height="300" />
+              <img src="assets/product-03.png" alt="Upholstered Couch & Occasional Chairs" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
                 <span class="overlay-label">View Details</span>
               </div>
             </div>
             <div class="product-info">
               <span class="product-category">Sofa</span>
-              <h3 class="product-name">Couch & Ocassional Chairs</h3>
+              <h3 class="product-name">Couch & Occasional Chairs</h3>
               <div class="product-price-row">
                 <span class="product-price">R5,500</span>
               </div>
@@ -106,8 +98,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 04 -->
-          <article class="product-card" aria-label="Sectional Couch">
+          <article class="product-card" data-category="sofa" aria-label="Sectional Couch">
             <div class="product-img-wrap">
               <img src="assets/product-04.png" alt="Upholstered Sectional Couch" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -124,8 +115,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 05 -->
-          <article class="product-card" aria-label="Office Chair">
+          <article class="product-card" data-category="chair" aria-label="Office Chair">
             <div class="product-img-wrap">
               <img src="assets/product-05.png" alt="Full upholstered Office Chair" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -142,8 +132,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 06 -->
-          <article class="product-card" aria-label="Couch set Upholstery">
+          <article class="product-card" data-category="sofa" aria-label="Couch set Upholstery">
             <div class="product-img-wrap">
               <img src="assets/product-06.png" alt="Couch set Upholstery" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -160,8 +149,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 07 -->
-          <article class="product-card" aria-label="Two Seater Recliner">
+          <article class="product-card" data-category="recliners" aria-label="Two Seater Recliner">
             <div class="product-img-wrap">
               <img src="assets/product-07.png" alt="Two Seater Recliner" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -178,8 +166,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 08 -->
-          <article class="product-card" aria-label="Single Seater">
+          <article class="product-card" data-category="recliners" aria-label="Single Seater">
             <div class="product-img-wrap">
               <img src="assets/product-08.png" alt="Single Seater" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -196,8 +183,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 09 -->
-          <article class="product-card" aria-label="Recliner Recovering">
+          <article class="product-card" data-category="recliners" aria-label="Recliner Recovering">
             <div class="product-img-wrap">
               <img src="assets/product-09.png" alt="Recliner Recovering" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -214,8 +200,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 10 -->
-          <article class="product-card" aria-label="L Shape Couch">
+          <article class="product-card" data-category="couches" aria-label="L Shape Couch">
             <div class="product-img-wrap">
               <img src="assets/product-10.png" alt="L Shape Couch" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -232,8 +217,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 11 -->
-          <article class="product-card" aria-label="Sectional Couch">
+          <article class="product-card" data-category="couches" aria-label="Sectional Couch">
             <div class="product-img-wrap">
               <img src="assets/product-11.png" alt="Sectional Couch" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -250,8 +234,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 12 -->
-          <article class="product-card" aria-label="Bed & Headboard">
+          <article class="product-card" data-category="bed-headboards" aria-label="Bed & Headboard">
             <div class="product-img-wrap">
               <img src="assets/product-12.png" alt="Bed & Headboards" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -268,17 +251,16 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 13 -->
-          <article class="product-card" aria-label="Ocassional Couch">
+          <article class="product-card" data-category="couches" aria-label="Occasional Couch">
             <div class="product-img-wrap">
-              <img src="assets/product-13.png" alt="Upholstered Ocassional Couch" loading="lazy" width="400" height="300" />
+              <img src="assets/product-13.png" alt="Upholstered Occasional Couch" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
                 <span class="overlay-label">View Details</span>
               </div>
             </div>
             <div class="product-info">
               <span class="product-category">Couches</span>
-              <h3 class="product-name">Ocassional Couch</h3>
+              <h3 class="product-name">Occasional Couch</h3>
               <div class="product-price-row">
                 <span class="product-price">R3,500</span>
               </div>
@@ -286,8 +268,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 14 -->
-          <article class="product-card" aria-label="two seater sofa">
+          <article class="product-card" data-category="sofa" aria-label="Two Seater Sofa">
             <div class="product-img-wrap">
               <img src="assets/product-14.png" alt="Upholstered two seater sofa" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -304,8 +285,7 @@
             </div>
           </article>
 
-          <!-- ✏️ PRODUCT 15 -->
-          <article class="product-card" aria-label="Sleeper Couch">
+          <article class="product-card" data-category="couches" aria-label="Sleeper Couch">
             <div class="product-img-wrap">
               <img src="assets/product-15.png" alt="Upholstered sleeper couch" loading="lazy" width="400" height="300" />
               <div class="product-overlay" aria-hidden="true">
@@ -322,9 +302,10 @@
             </div>
           </article>
 
-        </div><!-- /products-grid -->
+        </div>
 
-        <!-- Custom Order CTA -->
+        <p id="no-results" class="no-results">No products found in this category.</p>
+
         <div class="custom-banner">
           <div class="custom-banner-text">
             <h3>Don't See What You Need?</h3>
@@ -332,13 +313,10 @@
           </div>
           <a href="contact.html" class="btn btn-filled">Request Custom Order</a>
         </div>
-
-      </div><!-- /products-inner -->
+      </div>
     </section>
-
   </main>
 
-  <!-- ══ Footer ══ -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -366,5 +344,23 @@
     </div>
   </footer>
 
-  </body>
+  <div id="product-modal" class="product-modal" hidden>
+    <div class="product-modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button id="modal-close" type="button" aria-label="Close modal">&times;</button>
+
+      <img id="modal-img" src="" alt="" />
+      <div class="modal-content">
+        <span id="modal-badge" class="product-badge" style="display:none;"></span>
+        <p id="modal-category"></p>
+        <h3 id="modal-name"></h3>
+        <p>
+          <span id="modal-price"></span>
+          <span id="modal-price-original" style="display:none;"></span>
+        </p>
+        <a href="contact.html" class="product-cta">Inquire to Order</a>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>

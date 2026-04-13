@@ -1,1 +1,207 @@
-<!-- Filter Buttons -->\n<button data-filter="all">All</button>\n<button data-filter="category1">Category 1</button>\n<button data-filter="category2">Category 2</button>\n\n<!-- Product Cards -->\n<div class="product-card" data-category="category1">\n    <h3>Product 1</h3>\n    <p>Description of Product 1</p>\n    <button class="view-details">View Details</button>\n</div>\n<div class="product-card" data-category="category2">\n    <h3>Product 2</h3>\n    <p>Description of Product 2</p>\n    <button class="view-details">View Details</button>\n</div>\n\n<!-- Product Modal Structure -->\n<div class="product-modal" id="productModal" style="display:none;">\n    <div class="modal-content">\n        <span class="close-button">&times;</span>\n        <h1>Product Title</h1>\n        <p>Product details will be displayed here.</p>\n    </div>\n</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Upholstery Site</h1>
+    </header>
+    <div class="filter-buttons">
+        <button data-filter="all">All</button>
+        <button data-filter="sofas">Sofas</button>
+        <button data-filter="chairs">Chairs</button>
+        <button data-filter="tables">Tables</button>
+    </div>
+    <main>
+        <section class="products">
+            <div class="product-card" data-category="sofas">
+                <h2>Sofa 1</h2>
+                <p>Comfortable and stylish sofa.</p>
+                <button data-toggle="modal" data-target="#product-modal-1">View Details</button>
+            </div>
+            <div class="product-card" data-category="chairs">
+                <h2>Chair 1</h2>
+                <p>Elegant chair for any room.</p>
+                <button data-toggle="modal" data-target="#product-modal-2">View Details</button>
+            </div>
+            <div class="product-card" data-category="tables">
+                <h2>Table 1</h2>
+                <p>Stylish dining table.</p>
+                <button data-toggle="modal" data-target="#product-modal-3">View Details</button>
+            </div>
+            <div class="product-card" data-category="sofas">
+                <h2>Sofa 2</h2>
+                <p>Modern design sofa.</p>
+                <button data-toggle="modal" data-target="#product-modal-4">View Details</button>
+            </div>
+            <div class="product-card" data-category="chairs">
+                <h2>Chair 2</h2>
+                <p>Comfortable and stylish chair.</p>
+                <button data-toggle="modal" data-target="#product-modal-5">View Details</button>
+            </div>
+            <div class="product-card" data-category="tables">
+                <h2>Table 2</h2>
+                <p>Beautiful coffee table.</p>
+                <button data-toggle="modal" data-target="#product-modal-6">View Details</button>
+            </div>
+            <div class="product-card" data-category="sofas">
+                <h2>Sofa 3</h2>
+                <p>Classic leather sofa.</p>
+                <button data-toggle="modal" data-target="#product-modal-7">View Details</button>
+            </div>
+            <div class="product-card" data-category="chairs">
+                <h2>Chair 3</h2>
+                <p>Rustic wooden chair.</p>
+                <button data-toggle="modal" data-target="#product-modal-8">View Details</button>
+            </div>
+            <div class="product-card" data-category="tables">
+                <h2>Table 3</h2>
+                <p>Stylish side table.</p>
+                <button data-toggle="modal" data-target="#product-modal-9">View Details</button>
+            </div>
+            <div class="product-card" data-category="sofas">
+                <h2>Sofa 4</h2>
+                <p>Couch for relax and comfort.</p>
+                <button data-toggle="modal" data-target="#product-modal-10">View Details</button>
+            </div>
+            <div class="product-card" data-category="chairs">
+                <h2>Chair 4</h2>
+                <p>Stylish office chair.</p>
+                <button data-toggle="modal" data-target="#product-modal-11">View Details</button>
+            </div>
+            <div class="product-card" data-category="tables">
+                <h2>Table 4</h2>
+                <p>Elegant dining table.</p>
+                <button data-toggle="modal" data-target="#product-modal-12">View Details</button>
+            </div>
+            <div class="product-card" data-category="sofas">
+                <h2>Sofa 5</h2>
+                <p>Luxury sofa for your living room.</p>
+                <button data-toggle="modal" data-target="#product-modal-13">View Details</button>
+            </div>
+            <div class="product-card" data-category="chairs">
+                <h2>Chair 5</h2>
+                <p>Comfort chair for relax.</p>
+                <button data-toggle="modal" data-target="#product-modal-14">View Details</button>
+            </div>
+            <div class="product-card" data-category="tables">
+                <h2>Table 5</h2>
+                <p>Modern coffee table.</p>
+                <button data-toggle="modal" data-target="#product-modal-15">View Details</button>
+            </div>
+        </section>
+    </main>
+    <div id="product-modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sofa 1</h2>
+            <p>Details about Sofa 1.</p>
+        </div>
+    </div>
+    <div id="product-modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Chair 1</h2>
+            <p>Details about Chair 1.</p>
+        </div>
+    </div>
+    <div id="product-modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Table 1</h2>
+            <p>Details about Table 1.</p>
+        </div>
+    </div>
+    <div id="product-modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sofa 2</h2>
+            <p>Details about Sofa 2.</p>
+        </div>
+    </div>
+    <div id="product-modal-5" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Chair 2</h2>
+            <p>Details about Chair 2.</p>
+        </div>
+    </div>
+    <div id="product-modal-6" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Table 2</h2>
+            <p>Details about Table 2.</p>
+        </div>
+    </div>
+    <div id="product-modal-7" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sofa 3</h2>
+            <p>Details about Sofa 3.</p>
+        </div>
+    </div>
+    <div id="product-modal-8" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Chair 3</h2>
+            <p>Details about Chair 3.</p>
+        </div>
+    </div>
+    <div id="product-modal-9" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Table 3</h2>
+            <p>Details about Table 3.</p>
+        </div>
+    </div>
+    <div id="product-modal-10" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sofa 4</h2>
+            <p>Details about Sofa 4.</p>
+        </div>
+    </div>
+    <div id="product-modal-11" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Chair 4</h2>
+            <p>Details about Chair 4.</p>
+        </div>
+    </div>
+    <div id="product-modal-12" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Table 4</h2>
+            <p>Details about Table 4.</p>
+        </div>
+    </div>
+    <div id="product-modal-13" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sofa 5</h2>
+            <p>Details about Sofa 5.</p>
+        </div>
+    </div>
+    <div id="product-modal-14" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Chair 5</h2>
+            <p>Details about Chair 5.</p>
+        </div>
+    </div>
+    <div id="product-modal-15" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Table 5</h2>
+            <p>Details about Table 5.</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2026 Upholstery Site</p>
+    </footer>
+</body>
+</html>
